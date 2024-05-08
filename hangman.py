@@ -1,4 +1,4 @@
-#Step 4
+# This code is a basic Hangman game implemented in Python. It selects a random word from a list, prompts the player to guess letters, and displays the progress and hangman stages. The game continues until the player either guesses the word correctly or runs out of lives. 
 
 import random
 
