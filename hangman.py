@@ -1,68 +1,18 @@
 # This code is a basic Hangman game implemented in Python. It selects a random word from a list, prompts the player to guess letters, and displays the progress and hangman stages. The game continues until the player either guesses the word correctly or runs out of lives. 
 
 import random
+import hangman_words
+import hangman_art
 
-stages = ['''
-  +---+
-  |   |
-  O   |
- /|\  |
- / \  |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
- /    |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|\  |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
- /|   |
-      |
-      |
-=========''', '''
-  +---+
-  |   |
-  O   |
-  |   |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-  O   |
-      |
-      |
-      |
-=========
-''', '''
-  +---+
-  |   |
-      |
-      |
-      |
-      |
-=========
-''']
+print(hangman_art.logo)
+
+stages = hangman_art.stages
 
 end_of_game = False
-word_list = ["ardvark", "baboon", "camel"]
-chosen_word = random.choice(word_list)
+chosen_word = random.choice(hangman_words.word_list)
 word_length = len(chosen_word)
+
+
 lives = 6
 
 display = []
